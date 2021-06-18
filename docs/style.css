@@ -4,6 +4,7 @@
   }
 
 .background-image-container{
+    all: initial;
     width: 100%;
     height: 100%;
     background: #191919;
@@ -11,6 +12,7 @@
 }
 
 .bg-image{
+    all: initial;
     width: 95%;
     height: 150%;
     margin-left: -20px;
@@ -19,6 +21,7 @@
 }
 
 .container{
+    all: initial;
     background: #191919;
 }
 
@@ -27,11 +30,13 @@ header{
 }
 
 .homepage-title{
+    all: initial;
     height: 300px;
     float: left;
 }
 
 .nav-bar{
+    all: initial;
     margin-top: 20px;
     margin-left: 50%;
     float: left;
@@ -39,18 +44,21 @@ header{
 }
 
 #nav-button{
+    all: initial;
     text-decoration: none;
     color: white;
 }
 #nav-button:hover {opacity: 0.5}
 
 .info-button{
+    all: initial;
     float:left;
     border-right: 2px solid white;
     padding-right: 20px;
 }
 
 .more-button{
+    all: initial;
     float:left;
     border-right: 2px solid white;
     padding-right: 20px;
@@ -58,21 +66,25 @@ header{
 }
 
 .contact-button{
+    all: initial;
     float:left;
     padding-left: 20px;
 }
 
 .title{
+    all: initial;
     height: 50px;
     margin-left: 25px;
 }
 
 body{
+    all: initial;
     background: #191919;
     font-family: altone
 }
 
 .background-content{
+    all: initial;
     margin-top: 2%;
     margin-left: 6%;
     width: 100vh;
@@ -83,6 +95,7 @@ body{
 }
 
 footer{
+    all: initial;
     font-size: 10px;
     margin-top: 52%;
     margin-left: 82%;
@@ -92,6 +105,7 @@ footer{
 }
 
 .email-input{
+    all: initial;
     width: 50vh;
     height: 6vh;
     background: none;
@@ -105,10 +119,12 @@ footer{
 }
 
 h1{
+    all: initial;
     line-height: 1.15;
 }
 
 .typewrite{
+    all: initial;
     text-decoration: none;
     color: white;
 }
