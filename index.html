@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Take</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <meta charset="utf-8"/>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript">
+            function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "noah2list@gmail.com",
+                Password: "fireb",
+                To: 'noah@noahlist.com',
+                From: "First Take",
+                Subject: "Welcome to First Take!",
+                Body: "Hello, welcome to First Take Grading. We will reach out to you soon!",
+            })
+                .then(function (message) {
+                alert("Successfully added to mailing list!")
+                });
+            }
+        </script>
+        <script>
+            //made by vipul mirajkar thevipulm.appspot.com
+            var TxtType = function(el, toRotate, period) {
+                    this.toRotate = toRotate;
+                    this.el = el;
+                    this.loopNum = 0;
+                    this.period = parseInt(period, 10) || 2000;
+                    this.txt = '';
+                    this.tick();
+                    this.isDeleting = false;
+                };
+
+            TxtType.prototype.tick = function() {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+                }
+
+                setTimeout(function() {
+                that.tick();
+                }, delta);
+            };
+
+            window.onload = function() {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i=0; i<elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+                // INJECT CSS
+                var css = document.createElement("style");
+                css.type = "text/css";
+                css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff; font-size: 35px; padding-right: 2px}";
+                document.body.appendChild(css);
+            };
+        </script>
+    </head>
+    <header>
+        <div class="homepage-title">
+            <img class="title" href="https://www.noahlist.com" src="images/icons/transparent_icon-word.png">
+        </div>
+        <div class="nav-bar">
+            <div class="info-button"><a id="nav-button" href="noahlist.com">Info</a></div>
+            <div class="more-button"><a id="nav-button" href="noahlist.com">More</a></div>
+            <div class="contact-button"><a id="nav-button" href="noahlist.com">Contact</a></div>
+        </div>
+    </header>
+    <body>
+        <div class="container">
+            <div class="background-image-container">
+                <img class="bg-image" src="desktop-bg-svg.png">
+            </div>
+        </div>
+        <div class="background-content">
+            <a class="typewrite" data-period="2000" data-type='[ "Welcome to the future of grading collectibles", "We accurately grade your sports cards based off of your photos", "We are revolutionizing the sports memorabilia industry" ]'>
+                <span class="wrap"></span>
+            </a>
+            <h3>First Take uses artificial intelligence to <b>predict the quality of <br>sports cards in seconds</b></h3>
+            <h3>Join our mailing list to be contacted when available:</h3>
+            <input class="email-input" type="text" value="Email">
+            <button class="email-button" onclick="sendEmail()">Submit</button>
+            <h6>First Take Technologies © 2021</h6>
+        </div>
+    </body>
+    <footer>
+    </footer>
+</html>

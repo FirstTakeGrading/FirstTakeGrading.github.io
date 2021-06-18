@@ -1,0 +1,141 @@
+@font-face {
+    font-family: altone;
+    src: url(altone-trial.bold.ttf);
+  }
+
+.background-image-container{
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    position: fixed;
+}
+
+.bg-image{
+    width: 95%;
+    height: 150%;
+    margin-left: -20px;
+    margin-top: -20px;
+    z-index: -1;
+}
+
+.container{
+    background: #191919;
+}
+
+header{
+    height: 80px;
+}
+
+.homepage-title{
+    height: 300px;
+    float: left;
+}
+
+.nav-bar{
+    margin-top: 20px;
+    margin-left: 50%;
+    float: left;
+    color: white;
+}
+
+#nav-button{
+    text-decoration: none;
+    color: white;
+}
+#nav-button:hover {opacity: 0.5}
+
+.info-button{
+    float:left;
+    border-right: 2px solid white;
+    padding-right: 20px;
+}
+
+.more-button{
+    float:left;
+    border-right: 2px solid white;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.contact-button{
+    float:left;
+    padding-left: 20px;
+}
+
+.title{
+    height: 50px;
+    margin-left: 25px;
+}
+
+body{
+    background: #191919;
+    font-family: altone
+}
+
+.background-content{
+    margin-top: 2%;
+    margin-left: 6%;
+    width: 100vh;
+    position: fixed;
+    z-index: 1;
+    color: white;
+    line-height: 1.25;
+}
+
+footer{
+    font-size: 10px;
+    margin-top: 52%;
+    margin-left: 82%;
+    position:fixed;
+    color:white;
+    z-index: 1;
+}
+
+.email-input{
+    width: 50vh;
+    height: 6vh;
+    background: none;
+    border: none;
+    border-bottom: 3px solid white;
+    font-family: altone;
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+    font-size: 16px;
+}
+
+h1{
+    line-height: 1.15;
+}
+
+.typewrite{
+    text-decoration: none;
+    color: white;
+}
+
+  
+.email-button {
+    margin-left: 10px;
+    width: 120px;
+    height: 38px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+  
+.email-button:hover {
+    background-color: #2EE59D;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
