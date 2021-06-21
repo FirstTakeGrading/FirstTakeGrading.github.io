@@ -78,7 +78,7 @@ header{
 }
 
 body{
-    all: initial;
+    vertical-align: auto;
     background: #191919;
     font-family: altone
 }
