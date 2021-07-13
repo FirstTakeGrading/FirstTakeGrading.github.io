@@ -1,7 +1,8 @@
-@font-face {
+@font-face{
     font-family: altone;
-    src: url(altone-trial.bold.ttf);
-  }
+    src: local(altone), 
+         url(fonts/altone-font/altone-trial.bold.ttf);
+}
 
 .background-image-container{
     all: initial;
@@ -30,13 +31,10 @@ header{
 }
 
 .homepage-title{
-    all: initial;
-    height: 300px;
     float: left;
 }
 
 .nav-bar{
-    all: initial;
     margin-top: 20px;
     margin-left: 50%;
     float: left;
@@ -44,7 +42,7 @@ header{
 }
 
 #nav-button{
-    all: initial;
+    font-family: altone;
     text-decoration: none;
     color: white;
 }
@@ -80,7 +78,7 @@ header{
 body{
     vertical-align: auto;
     background: #191919;
-    font-family: altone
+    font-family: altone;
 }
 
 .background-content{
@@ -99,7 +97,6 @@ footer{
     font-size: 10px;
     margin-top: 52%;
     margin-left: 82%;
-    position:fixed;
     color:white;
     z-index: 1;
 }
@@ -154,4 +151,8 @@ h1{
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
     transform: translateY(-7px);
+}
+
+.typewrite{
+    font-family: altone;
 }
