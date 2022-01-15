@@ -1,20 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"/>
-    <title>First Take</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <head>
+    <title>First Take Card Report</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script>
+        function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
 
-<body>
-	 <div class="header">
+            reader.onload = function (e) {
+                $('#image-output')
+                    .attr('src', e.target.result)
+                    .width(250)
+                    .height(360);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    </script>
+    <style type="text/css">
+      @font-face{
+      font-family: altone;
+      src: local(altone), 
+          url(../static/altone-font/altone-trial.bold.ttf);
+      }
+		
+		
+	  .header{
+		padding-top: 10px;
+		padding-left: 10px;
+		width: 100%;
+		top: 0;
+		height: 80px;
+
+	}
+
+      h2, h4{
+          font-family: altone;
+      }
+
+      h4{
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      body{
+        font-family: altone;
+        background-color: #191919;
+        color: white;
+      }
+
+      #form{
+        background-image: linear-gradient(to bottom right, #009879, #009500);
+        font-family: altone;
+        padding: 20px;
+        border-radius: 10px;
+        float: left;
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 500px;
+      }
+
+      #container {
+        max-width: 870px;
+		padding-left: 20px;
+        background-color: #191919;
+        font-family: altone;
+        /*margin: auto;*/
+      }
+
+      #image-form{
+        background-image: linear-gradient(to bottom right, #009879, #009500);
+        font-family: altone;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-left: 30px;
+        width: 300px;
+        height: 500px;
+    }
+
+      .form-group{
+          margin-bottom: 15px;
+      }
+
+      .sub-button {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 120px;
+        height: 38px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #000;
+        background-color: #fff;
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+    }
+  
+    .sub-button:hover {
+        background-color: #2EE59D;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
+    </style>
+  </head>
+    <body>
+		<div class="header">
             <div class="homepage-title">
-                <img class="title" href="" src="images/icons/transparent_icon-word.png" alt="title">
+                <a href="index.html"><img class="title" src="images/icons/transparent_icon-word.png" alt="title"></a>
             </div>
             <div class="nav-bar">
                 <div class="info-button"><a id="nav-button" href="info.html">Info</a></div>
@@ -22,6 +131,38 @@
                 <div class="contact-button"><a id="nav-button" href="mailto:noah@noahlist.com">Contact</a></div>
             </div>
         </div>
-	
-</body>
+        <div id="container">
+            <!--<h2 style="margin-bottom: 20px; background-image: linear-gradient(to bottom right, #009879, #009500); margin: 20px; padding-left: 10px; padding-top: 20px; padding-bottom: 20px; border-radius: 10px;">First Take Card Submission Form</h2>-->
+            <form action="/report" method="POST" enctype="multipart/form-data">
+            <div id="form">
+                <h4 style="margin-bottom: 15px;">Card Information</h4>
+                    <div class="form-group">
+                        <input autocomplete="off" autofocus class="form-control" name="f_name" placeholder="First name">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" name="l_name" placeholder="Last name">
+                    </div>
+                    <div class="form-group">
+                        <input autocomplete="off" class="form-control" name="number" placeholder="Card Number">
+                    </div>
+                    <div class="form-group">
+                        <input autocomplete="off" class="form-control" name="year" placeholder="Card Year">
+                    </div>
+                    <div class="form-group">
+                        <input autocomplete="off" class="form-control" name="company" placeholder="Card Company">
+                    </div>
+                    <button class="sub-button" type="submit">Submit</button>
+                
+            </div>
+            <div id="image-form" style="float:left">
+                <h4>Card Image</h4>
+                <div id="image-insert">
+                    <input type='file' style="border-radius: 20px;" onchange="readURL(this);" name="image"/>
+                    <br>
+                    <img id="image-output" src="#" alt="image"/>
+                </div>
+            </div>
+            </form>
+        </div>
+    </body>
 </html>
