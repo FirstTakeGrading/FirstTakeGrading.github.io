@@ -11,3 +11,5 @@ function sendEmail() {
         alert("Successfully added to mailing list!")
         });
 }
+
+// Add MySQL help...

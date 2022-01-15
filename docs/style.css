@@ -38,6 +38,7 @@
 }
 
 .nav-bar{
+	position: fixed;
     margin-top: 20px;
     margin-left: 50%;
     float: left;
@@ -58,7 +59,7 @@
     padding-right: 20px;
 }
 
-.more-button{
+.demo-button{
     all: initial;
     float:left;
     border-right: 2px solid white;
