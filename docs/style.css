@@ -4,6 +4,11 @@
          url(fonts/altone-font/altone-trial.bold.ttf);
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .background-image-container{
     all: initial;
     width: 100%;
