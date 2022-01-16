@@ -14,23 +14,23 @@
 
 .bg-image{
     all: initial;
-    width: 95%;
-    height: 150%;
-    margin-left: -20px;
-    margin-top: -20px;
+    width: 2000px;
+    height: 1333px;
+	opacity: 100%;
+    margin-left: -50px;
+    margin-top: -100px;
     z-index: -1;
 }
 
 .container{
     all: initial;
-    background: #191919;
+    background-color: white;
 }
 
 .header{
     width: 100%;
     top: 0;
     height: 80px;
-
 }
 
 .homepage-title{
@@ -42,7 +42,6 @@
     margin-top: 20px;
     margin-left: 50%;
     float: left;
-    color: white;
 }
 
 #nav-button{
@@ -159,4 +158,16 @@ h1{
 
 .typewrite{
     font-family: altone;
+}
+
+footer {
+  background-color: rgba(6,140,73,1.00);
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  bottom: 0;
+  margin-left: -10px;
+  padding-left: 30px;
+  width: 120%;
+  height: 2.5rem; 
+  line-height: 2.5rem;
 }
