@@ -28,18 +28,20 @@
                 <img class="bg-image" src="images/ft_bg.png" alt="bg">
             </div>
             <div class="background-content">
-				<div class="card-icon-con" style="align-content: center;">
-                	<img style="max-width: 300px;" src="images/mcard.png" alt="card">
-	            </div>
-                <a class="typewrite" data-period="2000" data-type='[ "Welcome to the future of grading collectibles", "We accurately grade your sports cards based off of your photos", "We are revolutionizing the sports memorabilia industry" ]'>
-                    <span class="wrap"></span>
-                </a>
-				<div class="typewrite">
-					<i><h3>First Take uses artificial intelligence to <b>predict the quality of <br>sports cards in seconds</b></h3>
-						<h3>Join our mailing list to be contacted when available:</h3></i>
+				<div style="float: left; max-width: 80vh;">
+					<a class="typewrite" data-period="2000" data-type='[ "Welcome to the future of grading collectibles", "We accurately grade your sports cards based off of your photos", "We are revolutionizing the sports memorabilia industry" ]'>
+						<span class="wrap"></span>
+					</a>
+					<div class="typewrite">
+						<i><h3 style="line-height: 1.5;">First Take uses artificial intelligence to <b>predict the quality of sports cards in seconds</b></h3></i>
+							<h3>Join our mailing list to be contacted when available:</h3>
+					</div>
+					<input class="email-input" type="text" value="Email">
+					<button class="email-button" onclick="sendEmail()">Submit</button>
 				</div>
-                <input class="email-input" type="text" value="Email">
-                <button class="email-button" onclick="sendEmail()">Submit</button>
+				<div class="card-icon-con" style="float: left;">
+                	<img style="max-width: 350px; margin-left: 20px;" src="images/mcard.png" alt="card">
+	            </div>
             </div>
         </div>
     </body>
