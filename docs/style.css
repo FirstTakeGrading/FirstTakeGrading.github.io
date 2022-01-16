@@ -95,6 +95,7 @@ body{
     margin-top: 2%;
     margin-left: 6%;
     width: 130vh;
+    position: fixed;
     z-index: 99;
     color: white;
     line-height: 1.25;
