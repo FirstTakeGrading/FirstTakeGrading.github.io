@@ -82,6 +82,8 @@ html, body {
     all: initial;
     height: 50px;
     margin-left: 25px;
+	position: relative;
+	z-index: 99;
 }
 
 body{
@@ -167,4 +169,5 @@ footer {
   width: 120%;
   height: 2.5rem; 
   line-height: 2.5rem;
+  z-index: 99;
 }
